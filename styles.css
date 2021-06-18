@@ -1,0 +1,93 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.game {
+    display: flex;
+    flex-direction: column;
+    width: 800px;
+    height: 400px;
+    justify-content: center;
+    align-items: center;
+    border: 3px solid black;
+    background-color: blanchedalmond;
+    border-radius: 30px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.game__field {
+    width: 620px;
+    position: relative;
+    border: 3px solid black;
+    height: 246px;
+    background-color: white;
+}
+
+.cup {
+    display: inline-block;
+    height: 240px;
+    width: 80px;
+    background-color: lightblue;
+    border: 1px solid black;
+    position: absolute;
+    transition: left 0.7s;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    border-radius: 40% 40% 5% 5%;
+    cursor: pointer;
+}
+
+#c1 {
+    left: 20px;
+}
+
+#c2 {
+    left: 120px;
+}
+
+#c3 {
+    left: 220px;
+}
+
+#c4 {
+    left: 320px;
+}
+
+#c5 {
+    left: 420px;
+}
+
+#c6 {
+    left: 520px;
+}
+
+#ball {
+    width: 60px;
+    height: 60px;
+    background-color: darkred;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+#play {
+    font-family: 'Courier New', Courier, monospace;
+    margin-top: 10px;
+    font-size: 30px;
+    color: darkgoldenrod;
+    background-color:aliceblue;
+    border: 1px solid darkgoldenrod;
+    cursor: pointer;    
+}
+
+.status {
+    position: absolute;
+    bottom: 10px;
+    right: 20px;
+    color: red;
+}
