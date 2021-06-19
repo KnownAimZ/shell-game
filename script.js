@@ -1,6 +1,3 @@
-//left координаты стаканов
-const arr = ['20px','120px','220px','320px','420px','520px'];
-
 //подсказки для игрока
 const status = document.querySelector('.status');
 
@@ -42,11 +39,16 @@ const shuffle = n => {
 //начало игры
 document.querySelector('#play').addEventListener('click',()=>{
     document.querySelector('#ball').style.display = 'none';
-    setTimeout(shuffle, 0, 10);
+    setTimeout(shuffle, 0, +document.querySelector('#shuffle_count').value);
     document.querySelector('#play').disabled = true;
 });
 
-//рандом от Мин до Макса
+//проверка количества перемешиваний
+document.querySelector('#shuffle_count').addEventListener('focusout',function(){
+    if(!this.value||this.value<7||this.value>20) this.value = 7;
+})
+
+//рандом от мин до макс
 function randomInteger(min, max) {    
     let rand = min + Math.random() * (max + 1 - min);
     return Math.floor(rand);
